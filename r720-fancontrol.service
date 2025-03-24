@@ -1,0 +1,12 @@
+[Unit]
+Description=Custom R720 Fan Control
+After=network.target
+
+[Service]
+ExecStart=/home/winsock/.config/fans/control.sh
+Restart=always
+User=root
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
